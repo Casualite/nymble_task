@@ -1,0 +1,9 @@
+{
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "iom64hve2.h": "c",
+        "io.h": "c",
+        "iom328p.h": "c",
+        "uart.h": "c"
+    }
+}
