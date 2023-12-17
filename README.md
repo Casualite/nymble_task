@@ -46,6 +46,7 @@ Code written in C on VS code to run on an arduino uno r3 (atmega328p). Since the
 ## Links
   - [ATmega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf) Datasheet
   - [Arduino Uno](https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf) Reference manual
+  - [Screen Recording](https://drive.google.com/file/d/18rRd7TR1dyC1bxZvv6K_Yf9MiKQbc-gh/view?usp=drive_link)
 
 
 
