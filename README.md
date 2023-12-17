@@ -4,7 +4,7 @@ Code written in C on VS code to run on an arduino uno r3 (atmega328p). Since the
 ### UART INITIALIZATION
 - Internal clock disabled before with **fuse bits** i.e **CKSEL[3:0]=0000**
 ![image](https://github.com/Casualite/nymble_task/assets/92442612/ab537e8c-859e-42b4-b082-7c5c0f900f06)
-- **USART** is initailized, passing expected **baud rate** as parameter, 2400 taked as asked. **UBRR** bits set after calculating ubrr. Clock used for calculating ubrr is **16MHz**
+- **USART** is initailized, passing expected **baud rate** as parameter, 2400 taken as asked. **UBRR** bits set after calculating ubrr. Clock used for calculating ubrr is **16MHz**
 ![image](https://github.com/Casualite/nymble_task/assets/92442612/16a707e9-1142-4614-bfc8-ea69eab074be)
 
 - Appropriate bits changed in **UCSR0C** to enable sync/async operation, further **8 bit** dataframe used for UART operations
@@ -17,10 +17,10 @@ Code written in C on VS code to run on an arduino uno r3 (atmega328p). Since the
 -  No parity checks done
 
 ### UART TX/RX
-- **BUFFER** was created of size "1KB". This was used to store all bites in the string
+- **BUFFER** was created of size **1KB**. This was used to store all bites in the string
 ![image](https://github.com/Casualite/nymble_task/assets/92442612/81f8d5a4-5eea-42a0-8174-3639965c5ec4)
 
-- Interupt in **USART_RX_vect**(from **UCSR0A**) used to receive data from a function that follows datasheet. Then this is added to the buffer until a special character is reached, after which it starts transmitting data. I was not able to transmit '\0' hence used '$' as end of string character. This allows for variable number of characters to be sent, not specific to example
+- Interupt in **USART_RX_vect**(from **UCSR0A**) used to receive data from a function that follows from the datasheet. Then this is added to the buffer until a special character is reached, after which it starts transmitting data. I was not able to transmit '\0' hence used '$' as end of string character. This allows for variable number of characters to be sent, not specific to example
 ![image](https://github.com/Casualite/nymble_task/assets/92442612/45286b68-38d9-43b3-8b19-1a631c3f49a8)
 
 - As mentioned in the last point, once end character is obtained, TX starts. Tx is done in two ways:
