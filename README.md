@@ -21,7 +21,8 @@ Code written in C on VS code to run on an arduino uno r3 (atmega328p). Since the
 ![image](https://github.com/Casualite/nymble_task/assets/92442612/81f8d5a4-5eea-42a0-8174-3639965c5ec4)
 
 - Interupt in **USART_RX_vect**(from **UCSR0A**) used to receive data from a function that follows from the datasheet. Then this is added to the buffer until a special character is reached, after which it starts transmitting data. I was not able to transmit '\0' hence used '$' as end of string character. This allows for variable number of characters to be sent, not specific to example
-![image](https://github.com/Casualite/nymble_task/assets/92442612/45286b68-38d9-43b3-8b19-1a631c3f49a8)
+![image](https://github.com/Casualite/nymble_task/assets/92442612/ee0c8511-3b1d-4f2e-ad4a-2a6af19e57be)
+
 
 - As mentioned in the last point, once end character is obtained, TX starts. Tx is done in two ways:
     1. Using a function which **takes the string as argument**, which inturn calls another routine, which follows whats given in the datasheet
@@ -41,6 +42,10 @@ Code written in C on VS code to run on an arduino uno r3 (atmega328p). Since the
 
 
   ![image](https://github.com/Casualite/nymble_task/assets/92442612/68374660-f9b9-4ee5-b430-641a455699d6)
+
+## Links
+  - [ATmega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf) Datasheet
+  - [Arduino Uno](https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf) Reference manual
 
 
 
