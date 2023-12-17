@@ -30,7 +30,7 @@ Code written in C on VS code to run on an arduino uno r3 (atmega328p). Since the
 > [!WARNING]
 > Use only one at a time, using both will cause a lot of wrong **USART Transmit Complete** interupts to trigger, **leading to a many more wrong triggers at an exponential rate**.
 
-## PC Side
+## PC Side code
 - Code is written in **python**
 - Uses **pyserial** to establish connection with arduino 
 - The String is encoded in **utf-8** and written to the arduino
