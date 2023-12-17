@@ -34,7 +34,7 @@ Code written in C on VS code to run on an arduino uno r3 (atmega328p). Since the
 - Code is written in **python**
 - Uses **pyserial** to establish connection with arduino 
 - The String is encoded in **utf-8** and written to the arduino
-- timer is started , and once every **N** bits are reached, it calculates the elapsed time. N=10 in this case.
+- **timeit** used for timer.Timer is started , and once every **N** bits are reached, it calculates the elapsed time using **datetime.timedelta**. N=10 in this case.
 ![image](https://github.com/Casualite/nymble_task/assets/92442612/0e19d1a8-b4b1-43e0-80f7-b0e0f74780b3)
 - Meanwhile the transmitted string is collected into an empty string and displayed at the end. This was done to prevent displaying both simultaneously. Also an observation made was that, **print statements cause PC and board to desynchronize, leading to errors like missing characters or completely changed characters**
 - output:
