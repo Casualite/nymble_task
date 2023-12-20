@@ -29,7 +29,7 @@ Code written in C on VS code to run on an arduino uno r3 (atmega328p). Since the
 ![image](https://github.com/Casualite/nymble_task/assets/92442612/aaf5ceeb-0a43-4d55-8a14-685da7b194b6)
     1. Triggering **USART_TX_vect** interupt from **USART_RX_vect** interupt, both are in **UCSR0A**. What follows is recursive inturpts after each Tx is complete, until all characters are read and transmitted, including the end of sentence character
 > [!WARNING]
-> Use only one at a time, using both will cause a lot of wrong **USART Transmit Complete** interupts to trigger, **leading to a many more wrong triggers at an exponential rate**.
+> Use only one at a time, using both will cause a lot of wrong **USART Transmit Complete** interupts to trigger, **leading to many more wrong triggers at an exponential rate**.
 
 ## PC Side code
 - Code is written in **python**
