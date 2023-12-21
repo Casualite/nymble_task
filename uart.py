@@ -23,7 +23,7 @@ while(True):
     st+=ReceivedString
     if(c%SAMPLE_FREQUENCY==0):
         stop=timer()
-        print("for every",SAMPLE_FREQUENCY,"bits, bps:",(SAMPLE_FREQUENCY*1e6)/(timedelta(seconds=stop-start).microseconds))
+        print("for every",SAMPLE_FREQUENCY,"bytes, bps:",(SAMPLE_FREQUENCY*8*1e6)/(timedelta(seconds=stop-start).microseconds))
         start=timer()
     c+=1
 print(st)
